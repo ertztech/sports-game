@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  
+</head>
+<body>
+<h1>Football Game</h1>
+<div class="btn-group btn-group-justified">
+    <a href="#" id="home1"  class="btn btn-primary">GB</a>
+    <a href="#" id="vis1"   class="btn btn-primary">SEA</a>
+</div>	
+<input id="game1" type="range" onchange="doStuff()" value="0" />
+
+<div class="btn-group btn-group-justified">
+    <a href="#" id="home2"  class="btn btn-primary">DET</a>
+    <a href="#" id="vis2"   class="btn btn-primary">CHI</a>
+</div>	
+<input id="game2" type="range" onchange="doStuff()" value="0" />
+
+<!-- <div class="btn-group">
+   <button type="button" id="home" class="btn btn-primary">GB</button>
+   <button type="button" onclick="doStuff()" class="btn btn-primary">SEA</button>
+</div>
+<input id="game2" type="range" onchange="doStuff()" value="0" /> -->
+<p id="test"></p>
+
+<script>
+function doStuff(){
+
+var myValue = (parseInt(document.getElementById('game1').value))+(parseInt(document.getElementById('game2').value));
+document.getElementById('test').innerHTML = myValue + " points";
+
+}
+
+
+
+function keepScore(){
+document.getElementById('game2').value;
+}
+</script>
+
+
+
+</body>
+</html>
